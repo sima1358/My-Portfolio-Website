@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="style.js"></script>
   </head>
   <body>
     <div id="header">
@@ -51,19 +52,56 @@
             </p>
 
             <div class="tab-titles">
-              <p class="tab-links active-link">Skills</p>
-              <p class="tab-links">Experience</p>
-              <p class="tab-links">Education</p>
+              <p class="tab-links active-link" onclick="openTab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="openTab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="openTab('education')">Education</p>
             </div>
-            <div class="tab-contents">
+            <!-- skills -->
+            <div class="tab-contents active-tab" id="skills">
               <ul>
-                <li><span>UI</span><br>Designing Web and App Interface</li>
-                <li><span>Web Developer</span><br>Web app Development</li>
-                <li><span>App Developer</span><br>Building Android apps</li>
-             
+                <li><span>UI</span><br />Designing Web and App Interface</li>
+                <li><span>Web Developer</span><br />Web app Development</li>
+                <li><span>App Developer</span><br />Building Android apps</li>
+              </ul>
+            </div>
+            <!-- experience -->
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>Experience ONE </span><br />Experience ONE</li>
+                <li><span>Experience TWO </span><br />Experience TWO</li>
+                <li><span>Experience THREE </span><br />Experience THREE</li>
+              </ul>
+            </div>
+            <!-- education -->
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>DCI (Digital Career Institute) 2022-2023</span><br />Web
+                  and Software Development
+                </li>
+                <li>
+                  <span>Italian School 2017-2018</span><br />Italian Translation
+                </li>
+                <li>
+                  <span>Azad University 1998-2002</span><br />English
+                  Translation
+                </li>
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <!-- ----------services ------------>
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">MY Services</h1>
+        <div class="services-list">
+          
         </div>
       </div>
     </div>
