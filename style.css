@@ -13,7 +13,7 @@ body {
 #header {
   width: 100%;
   height: 40rem;
-  background-image: url(./myImage.png);
+  background-image: url(./images/myImage.png);
   background-repeat: no-repeat;
   background-position: right;
 }
