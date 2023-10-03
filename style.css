@@ -243,7 +243,7 @@ nav ul li a:hover::after {
   padding: 0 40px;
   text-align: center;
   font-size: 14px;
-  transition: height 0.5s ;
+  transition: height 0.5s;
 }
 
 .layer h3 {
@@ -272,7 +272,7 @@ nav ul li a:hover::after {
   height: 100%;
 }
 
-.btn{
+.btn {
   display: block;
   margin: 50px auto;
   width: fit-content;
@@ -281,4 +281,47 @@ nav ul li a:hover::after {
   border-radius: 6px;
   text-decoration: none;
   color: #fff;
+  transition: background 0.5s;
+}
+
+.btn:hover {
+  background: #ff004f;
+}
+
+/* -------contact-------------- */
+
+.contact-left {
+  flex-basis: 35%;
+}
+
+.contact-right {
+  flex-basis: 60%;
+}
+
+.contact-left p {
+  margin-top: 30px;
+}
+
+.contact-left p i {
+  color: #ff004f;
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff004f;
+  transform: translateY(-5px);
 }
