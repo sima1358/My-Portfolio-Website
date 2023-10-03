@@ -5,6 +5,9 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
 body {
   background: rgba(0, 0, 0, 0.904);
   color: #fff;
@@ -145,13 +148,13 @@ nav ul li a:hover::after {
 .tab-contents ul li {
   list-style: none;
   margin: 15px 5px;
- }
+}
 
 .tab-contents ul li span {
   color: #b5476b;
   font-size: 20px;
   padding-top: 1rem;
-line-height: 2rem;
+  line-height: 2rem;
 }
 
 .tab-contents {
@@ -374,6 +377,10 @@ form .btn2 {
 }
 
 /* -------------- RESPONSIVE----------------- */
+nav .fa-sharp {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .logo {
     width: 100px;
@@ -384,12 +391,40 @@ form .btn2 {
     text-align: center;
     justify-content: center;
     align-items: center;
-
   }
+
+  nav .fa-sharp {
+    display: block;
+    font-family: 25px;
+  }
+
   nav ul li a {
     font-size: 20px;
   }
 
+  nav ul {
+    background: #ff004f;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+
+  nav ul .fa-sharp {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
   /* -------header-------------- */
   #header {
     background-image: url();
@@ -405,7 +440,6 @@ form .btn2 {
 
   /* -------about-------------- */
   #about {
-    border: 2px solid yellow;
     padding: 20px 2px;
   }
 
@@ -414,7 +448,6 @@ form .btn2 {
   }
   .row {
     display: inline;
-   
   }
 
   .about-col-1 {
@@ -432,10 +465,9 @@ form .btn2 {
   .p-about-me {
     margin: 1rem;
   }
- 
+
   .tab-links {
-    margin:1rem 0.5rem;
-     font-weight: 700;
-     }
- 
+    margin: 1rem 0.5rem;
+    font-weight: 700;
+  }
 }

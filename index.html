@@ -17,12 +17,15 @@
       <div class="container">
         <nav>
           <img src="./images/logo.png" class="logo" />
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Biography</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+          <ul id="sideMenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">My Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-sharp fa-solid fa-xmark" onclick="closeMenu()"></i>
           </ul>
+          <i class="fa-solid fa-bars" onclick="openMenu()"></i>
         </nav>
         <div class="header-text">
           <p>Frontend Developer</p>
@@ -153,9 +156,9 @@
     </div>
 
     <!-- ================ portfolio ===========-->
-    <div id="portfolio">
+    <div id="projects">
       <div class="container">
-        <h1 class="sub-title">My Work</h1>
+        <h1 class="sub-title">My Projects</h1>
         <div class="work-list">
           <!-- work one -->
           <div class="work">
@@ -204,11 +207,11 @@
             >
           </div>
           <div class="contact-right">
-            <form>
-              <input type="text" name="Name" placeholder="Your Name" required />
+            <form name="submit-to-google-sheet">
+              <input type="text" name="name" placeholder="Your Name" required />
               <input
                 type="email"
-                name="Email"
+                name="email"
                 placeholder="Your Email"
                 required
               />
