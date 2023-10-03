@@ -381,6 +381,11 @@ nav .fa-sharp {
   display: none;
 }
 
+#msg{
+  color: #61b752;
+  margin-top: -40px;
+  display: block;
+}
 @media (max-width: 768px) {
   .logo {
     width: 100px;

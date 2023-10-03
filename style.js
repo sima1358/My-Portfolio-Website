@@ -25,15 +25,37 @@ function closeMenu() {
 }
 
 const scriptURL =
-  "https://script.google.com/macros/s/AKfycbxX009Nbd2Kza_-3nKVvx06XwM7Z-zv9R3D3Q1-dOBkHjKUyhvDPsgXjDeEO8yregWH9Q/exec";
+  "https://script.google.com/macros/s/AKfycbyU-Q9uD102Dqz2-_H-VTTpUGgJQkvpLsnVtyxoRN5ZARai4TsQ9mXmJLNatW7ExMnVYQ/exec";
 
-const form = document.forms["submit-to-google-sheet"];
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.forms["submit-to-google-sheet"];
+  const msg = document.getElementById("msg");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  fetch(scriptURL, { method: "POST", body: new FormData(form) })
-    .then((response) => console.log("Success!", response))
-    .catch((error) => console.error("Error!", error.message));
+  if (!msg) {
+    console.error("Error: 'msg' element not found in the DOM");
+    return;
+  }
 
-  console.log(scriptURL);
+  if (!form) {
+    console.error(
+      "Error: Form with name 'submit-to-google-sheet' not found in the DOM"
+    );
+    return;
+  }
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    fetch(scriptURL, { method: "POST", body: new FormData(form) })
+      .then((res) => {
+        msg.innerHTML = "Your Message Submitted!";
+        setTimeout(function () {
+          msg.innerHTML = "";
+        }, 5000);
+        form.reset();
+      })
+      .catch((error) => {
+        console.error("Error!", error.message);
+        console.log(error);
+      });
+  });
 });
