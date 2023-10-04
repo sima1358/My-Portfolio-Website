@@ -377,7 +377,11 @@ form .btn2 {
 }
 
 /* -------------- RESPONSIVE----------------- */
-nav .fa-sharp {
+nav .fa-sharp{
+  display: none;
+}
+
+#menu-icon{
   display: none;
 }
 
@@ -475,4 +479,9 @@ nav .fa-sharp {
     margin: 1rem 0.5rem;
     font-weight: 700;
   }
+
+  #menu-icon{
+    display: block;
+  }
+  
 }
