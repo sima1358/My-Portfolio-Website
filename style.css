@@ -118,8 +118,8 @@ nav ul li a:hover::after {
   text-align: justify;
   line-height: 2rem;
   font-size: 20px;
-
 }
+
 .tab-titles {
   display: flex;
   margin: 20px 40px;
@@ -478,9 +478,11 @@ nav .fa-sharp{
 
   .p-about-me {
     margin: 1rem;
+    font-size: 15px;
+
   }
 
-  .tab-links {
+   .tab-links {
     margin: 1rem 0.5rem;
     font-weight: 700;
   }
@@ -489,4 +491,9 @@ nav .fa-sharp{
     display: block;
   }
   
+  
+.layer h3 {
+  font-size: 15px;
+  
+ }
 }
